@@ -1,0 +1,57 @@
+{
+  "id": "f52d1a32-1160-404b-a137-490e7fec3e63",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "my_schema.users": {
+      "name": "users",
+      "schema": "my_schema",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "color": {
+          "name": "color",
+          "type": "colors",
+          "typeSchema": "my_schema",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'red'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {
+    "my_schema.colors": {
+      "name": "colors",
+      "schema": "my_schema",
+      "values": [
+        "red",
+        "green",
+        "blue"
+      ]
+    }
+  },
+  "schemas": {
+    "my_schema": "my_schema"
+  },
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
